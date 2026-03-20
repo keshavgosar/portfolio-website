@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// CHANGED: Added Github, Linkedin, and Youtube icons
 import { ChevronLeft, ChevronRight, Github, Linkedin, Youtube } from 'lucide-react';
 
 const highlightClips = [
-  "/assets/stealth-gameplay.webm",
-  "/assets/crypt-gameplay.webm",
-  "/assets/obstacle-gameplay.webm"
+  "/assets/projectclips/verdant-souls/verdantsoulsdemo3 (1).webm",
+  "/assets/projectclips/nightfall-chronicles/CombatMechanic.webm",
+  "/assets/projectclips/toon-tanks/ToonTanksCombat.webm",
+  "/assets/projectclips/dungeon-puzzle/DungeonPuzzlemain.webm"
 ];
 
 export default function LandingScene({ onEnter }) {
@@ -26,12 +26,13 @@ export default function LandingScene({ onEnter }) {
       <div className="absolute inset-0 bg-[url('/assets/landscape.png')] opacity-30 bg-cover bg-center" />
       
       {/* --- HEADER: Social Links (Top Right) --- */}
-      <div className="absolute top-0 w-full p-4 md:p-6 flex justify-end items-center gap-4 md:gap-6 z-50">
+      {/* CHANGED: Added a dark gradient that fades downward (from-black/90 to-transparent) and dimmed the icons to text-gray-500 */}
+      <div className="absolute top-0 w-full p-4 md:p-6 flex justify-end items-center gap-4 md:gap-6 z-50 bg-gradient-to-b from-black/90 via-black/50 to-transparent pb-12">
         <a 
           href="https://www.linkedin.com/in/keshav-gosar-479460227" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-gray-300 hover:text-amber-400 hover:scale-110 transition-transform drop-shadow-md"
+          className="text-gray-500 hover:text-amber-500 hover:scale-110 transition-all drop-shadow-md cursor-pointer"
         >
           <Linkedin size={28} className="md:w-8 md:h-8" />
         </a>
@@ -39,22 +40,22 @@ export default function LandingScene({ onEnter }) {
           href="https://github.com/keshavgosar" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-gray-300 hover:text-amber-400 hover:scale-110 transition-transform drop-shadow-md"
+          className="text-gray-500 hover:text-amber-500 hover:scale-110 transition-all drop-shadow-md cursor-pointer"
         >
           <Github size={28} className="md:w-8 md:h-8" />
         </a>
         <a 
-          href="https://youtube.com/@keshavgosar?si=M6DI_z0x-0mbNHfH" 
+          href="https://youtube.com/@keshavgosar?si=tzOAaueMIfgCApq_" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-gray-300 hover:text-amber-400 hover:scale-110 transition-transform drop-shadow-md"
+          className="text-gray-500 hover:text-amber-500 hover:scale-110 transition-all drop-shadow-md cursor-pointer"
         >
           <Youtube size={32} className="md:w-9 md:h-9" />
         </a>
       </div>
 
       {/* Main Container */}
-      <div className="relative z-10 w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+      <div className="relative z-10 w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 mt-8 md:mt-0">
         
         {/* LEFT SIDE: Name and Button */}
         <motion.div
@@ -66,15 +67,18 @@ export default function LandingScene({ onEnter }) {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-medieval text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-700 drop-shadow-[0_5px_5px_rgba(0,0,0,1)] mb-4 leading-tight">
             Keshav Gosar
           </h1>
-          <h2 className="text-xl md:text-3xl text-gray-300 font-casual italic mb-8 md:mb-12">
+          <h2 className="text-xl md:text-3xl text-gray-300 font-casual italic mb-8 md:mb-6">
             Gameplay Programmer
           </h2>
+          <p className="text-xl md:text-1xl text-gray-300 font-casual italic mb-8 md:mb-12 max-w-lg">
+          Forging immersive player experiences and robust game systems through the power of Unreal Engine and Unity.
+          </p>
 
           <motion.button
             whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px rgba(253, 224, 71, 0.6)" }}
             whileTap={{ scale: 0.95 }}
             onClick={onEnter}
-            className="bg-red-800 text-yellow-100 border-2 border-yellow-600 px-8 py-4 rounded-lg font-medieval text-2xl uppercase tracking-widest transition-all shadow-xl"
+            className="bg-red-800 text-yellow-100 border-2 border-yellow-600 px-8 py-4 rounded-lg font-medieval text-2xl uppercase tracking-widest transition-all shadow-xl cursor-pointer"
           >
             Begin Quest
           </motion.button>
@@ -136,8 +140,9 @@ export default function LandingScene({ onEnter }) {
       </div>
 
       {/* --- FOOTER: Copyright (Bottom Center) --- */}
-      <div className="absolute bottom-2 md:bottom-4 w-full text-center z-50 pointer-events-none">
-        <p className="text-gray-400 font-casual text-[10px] md:text-sm tracking-wider drop-shadow-md">
+      {/* CHANGED: Added dark gradient fading upwards (from-black/90 to-transparent) and dimmed text to text-gray-500 */}
+      <div className="absolute bottom-0 w-full text-center z-50 pointer-events-none bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-12 pb-2 md:pb-4">
+        <p className="text-gray-500 font-casual text-[10px] md:text-sm tracking-wider drop-shadow-md">
           © 2026 Keshav Gosar. All rights reserved.
         </p>
       </div>
