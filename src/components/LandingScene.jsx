@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+// CHANGED: Added Github, Linkedin, and Youtube icons
+import { ChevronLeft, ChevronRight, Github, Linkedin, Youtube } from 'lucide-react';
 
-// --- ADD YOUR VIDEO CLIPS HERE ---
 const highlightClips = [
-  "/assets/projectclips/verdant-souls/verdantsoulsdemo3 (1).webm",
-  "/assets/projectclips/nightfall-chronicles/CombatMechanic.webm",
-  "/assets/projectclips/dungeon-puzzle/DungeonPuzzlemain.webm",
-  "/assets/projectclips/toon-tanks/ToonTanksCombat.webm"
+  "/assets/stealth-gameplay.webm",
+  "/assets/crypt-gameplay.webm",
+  "/assets/obstacle-gameplay.webm"
 ];
 
 export default function LandingScene({ onEnter }) {
@@ -26,11 +25,35 @@ export default function LandingScene({ onEnter }) {
       {/* Background */}
       <div className="absolute inset-0 bg-[url('/assets/landscape.png')] opacity-30 bg-cover bg-center" />
       
-      {/* 
-        Main Container 
-        flex-col on mobile (stacked)
-        md:flex-row on desktop (side-by-side)
-      */}
+      {/* --- HEADER: Social Links (Top Right) --- */}
+      <div className="absolute top-0 w-full p-4 md:p-6 flex justify-end items-center gap-4 md:gap-6 z-50">
+        <a 
+          href="https://www.linkedin.com/in/keshav-gosar-479460227" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-gray-300 hover:text-amber-400 hover:scale-110 transition-transform drop-shadow-md"
+        >
+          <Linkedin size={28} className="md:w-8 md:h-8" />
+        </a>
+        <a 
+          href="https://github.com/keshavgosar" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-gray-300 hover:text-amber-400 hover:scale-110 transition-transform drop-shadow-md"
+        >
+          <Github size={28} className="md:w-8 md:h-8" />
+        </a>
+        <a 
+          href="https://youtube.com/@keshavgosar?si=M6DI_z0x-0mbNHfH" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-gray-300 hover:text-amber-400 hover:scale-110 transition-transform drop-shadow-md"
+        >
+          <Youtube size={32} className="md:w-9 md:h-9" />
+        </a>
+      </div>
+
+      {/* Main Container */}
       <div className="relative z-10 w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         
         {/* LEFT SIDE: Name and Button */}
@@ -64,13 +87,11 @@ export default function LandingScene({ onEnter }) {
           transition={{ duration: 1.5, delay: 0.3 }}
           className="flex-1 w-full max-w-2xl flex justify-center md:justify-end"
         >
-          {/* TV/Frame for the video */}
           <div className="relative w-full aspect-video bg-wood-dark border-4 border-wood-light rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] overflow-hidden group">
             
-            {/* The Video Player with Crossfade */}
             <AnimatePresence mode="wait">
               <motion.video
-                key={currentClip} // The key forces React to crossfade when the clip changes
+                key={currentClip}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -84,23 +105,20 @@ export default function LandingScene({ onEnter }) {
               />
             </AnimatePresence>
 
-            {/* Left Control Arrow */}
             <button 
               onClick={prevClip}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-amber-600 border-2 border-wood-light text-white p-2 rounded-full opacity-100 md:opacity-0 group-hover:opacity-100 transition-all z-20 active:scale-95"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-amber-600 border-2 border-wood-light text-white p-2 rounded-full opacity-100 md:opacity-0 group-hover:opacity-100 transition-all z-20 active:scale-95 cursor-pointer"
             >
               <ChevronLeft size={24} />
             </button>
 
-            {/* Right Control Arrow */}
             <button 
               onClick={nextClip}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-amber-600 border-2 border-wood-light text-white p-2 rounded-full opacity-100 md:opacity-0 group-hover:opacity-100 transition-all z-20 active:scale-95"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-amber-600 border-2 border-wood-light text-white p-2 rounded-full opacity-100 md:opacity-0 group-hover:opacity-100 transition-all z-20 active:scale-95 cursor-pointer"
             >
               <ChevronRight size={24} />
             </button>
 
-            {/* Video Indicators (Little dots at the bottom) */}
             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
               {highlightClips.map((_, idx) => (
                 <div 
@@ -112,12 +130,18 @@ export default function LandingScene({ onEnter }) {
               ))}
             </div>
 
-            {/* Inner Shadow overlay to make it look like an inset screen */}
             <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] pointer-events-none z-10" />
           </div>
         </motion.div>
-
       </div>
+
+      {/* --- FOOTER: Copyright (Bottom Center) --- */}
+      <div className="absolute bottom-2 md:bottom-4 w-full text-center z-50 pointer-events-none">
+        <p className="text-gray-400 font-casual text-[10px] md:text-sm tracking-wider drop-shadow-md">
+          © 2026 Keshav Gosar. All rights reserved.
+        </p>
+      </div>
+
     </div>
   );
 }
