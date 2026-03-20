@@ -24,7 +24,7 @@ export default function LandingScene({ onEnter }) {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center bg-black relative p-4 md:p-8">
       {/* Background */}
-      <div className="absolute inset-0 bg-[url('assets/landscape.png')] opacity-30 bg-cover bg-center" />
+      <div className="absolute inset-0 bg-[url('/assets/landscape.png')] opacity-30 bg-cover bg-center" />
       
       {/* 
         Main Container 
