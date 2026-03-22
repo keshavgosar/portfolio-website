@@ -55,7 +55,7 @@ const myProjects = [
       }
     ],
     // Replace this with your actual YouTube gameplay trailer URL (use /embed/ format)
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    youtubeUrl: "https://www.youtube.com/embed/lGfNZV1_Ygs",
     downloadUrl: "https://keshav567.itch.io/nightfall-chronicles"
   },
   {
@@ -99,7 +99,7 @@ const myProjects = [
         ]
       }
     ],
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with your actual video embed link
+    youtubeUrl: "", // Replace with your actual video embed link
     downloadUrl: "https://github.com/keshavgosar/verdant-souls-ue5" // Linking to GitHub since it's a code prototype
   },
   {
@@ -123,7 +123,7 @@ const myProjects = [
         ]
       }
     ],
-    youtubeUrl: "",
+    youtubeUrl: "https://www.youtube.com/embed/NhE1sZ_J4WE",
     downloadUrl: "https://keshav567.itch.io/dungeon-puzzle"
   },
   {
@@ -157,14 +157,14 @@ const myProjects = [
         ]
       }
     ],
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with your actual video embed link
+    youtubeUrl: "https://www.youtube.com/embed/v3YwVAHFMZ4", // Replace with your actual video embed link
     downloadUrl: "https://drive.google.com/drive/folders/1T2_76YtypkTyfzIWQCwH75y6p9lmyaFf?usp=sharing"
   },
   {
     id: 5,
     title: "Crypt Quest",
     mediaType: "video", 
-    mediaUrl: "/assets/crypt-gameplay.webm", 
+    mediaUrl: "/assets/projectclips/crypt-quest/cryptRaiderEnv.webm", 
     shortDescription: "A 3D puzzle-adventure exploring a forgotten underground world with intricate environmental puzzles.",
     mainSystems: ["Environmental Puzzles", "Level Streaming", "Atmospheric Lighting"],
     longDescription: "Step into the shadows of an ancient crypt in Crypt Quest, a 3D puzzle-adventure built using Unreal Engine (C++ and Blueprints). The game focuses on immersive exploration and environmental storytelling. Players must use observation and logic to unlock mechanisms and progress deeper into the crypt. A heavy emphasis was placed on atmospheric lighting and optimized level transitions to maintain a seamless, immersive experience.",
@@ -172,7 +172,7 @@ const myProjects = [
     mechanics: [
       {
         title: "Environmental Puzzles",
-        videoUrl: "/assets/crypt-puzzles.webm", 
+        videoUrl: "/assets/projectclips/crypt-quest/cryptRaiderEnv.webm", 
         description: "Interactive elements that require logic and observation.",
         features: [
           "Physics and logic-based mechanisms built with C++ and Blueprints",
@@ -182,7 +182,7 @@ const myProjects = [
       },
       {
         title: "Atmosphere & Progression",
-        videoUrl: "/assets/crypt-atmosphere.webm", 
+        videoUrl: "/assets/projectclips/crypt-quest/cryptRaiderEnviornment.webm", 
         description: "Seamless world exploration and optimized rendering.",
         features: [
           "Atmospheric lighting design to guide player focus and enhance immersion",
@@ -191,14 +191,14 @@ const myProjects = [
         ]
       }
     ],
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video link
+    youtubeUrl: "https://www.youtube.com/embed/xTJiSxmRUbM", // Replace with actual video link
     downloadUrl: "https://keshav567.itch.io/cryptraider" // Link to itch.io or GitHub
   },
   {
     id: 6,
     title: "Obstacle Assault",
     mediaType: "video", 
-    mediaUrl: "/assets/obstacle-gameplay.webm", 
+    mediaUrl: "/assets/projectclips/obstacle-assault/ObstacleAssoultCon.webm", 
     shortDescription: "A thrilling 3D platformer where players navigate dynamic obstacle courses requiring precision and timing.",
     mainSystems: ["Character Controller", "Dynamic Hazards", "Platforming Logic"],
     longDescription: "Test your reflexes and precision in Obstacle Assault, a 3D platformer built in Unreal Engine 5. The game challenges players to navigate through intricate obstacle courses filled with moving platforms and hazards. The core focus during development was creating a highly responsive character controller and designing levels with an increasing difficulty curve that rewards patience, timing, and quick decision-making.",
@@ -206,7 +206,7 @@ const myProjects = [
     mechanics: [
       {
         title: "Precision Movement",
-        videoUrl: "/assets/obstacle-movement.webm", 
+        videoUrl: "/assets/projectclips/obstacle-assault/ObstacleAssoultCon.webm", 
         description: "A highly tuned character controller built specifically for platforming.",
         features: [
           "Smooth and responsive jump physics",
@@ -216,7 +216,7 @@ const myProjects = [
       },
       {
         title: "Dynamic Hazards",
-        videoUrl: "/assets/obstacle-hazards.webm", 
+        videoUrl: "/assets/projectclips/obstacle-assault/ObstacleAssoultRot.webm", 
         description: "Interactive world elements designed to test player timing.",
         features: [
           "Moving platforms utilizing interpolation and timeline math",
@@ -225,7 +225,7 @@ const myProjects = [
         ]
       }
     ],
-    youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video link
+    youtubeUrl: "https://www.youtube.com/embed/9M27O-TuomI", // Replace with actual video link
     downloadUrl: "#" // Link to itch.io or GitHub
   }
 ];

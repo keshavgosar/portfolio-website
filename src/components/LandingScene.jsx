@@ -6,7 +6,8 @@ const highlightClips = [
   "/assets/projectclips/verdant-souls/verdantsoulsdemo3 (1).webm",
   "/assets/projectclips/nightfall-chronicles/CombatMechanic.webm",
   "/assets/projectclips/toon-tanks/ToonTanksCombat.webm",
-  "/assets/projectclips/dungeon-puzzle/DungeonPuzzlemain.webm"
+  "/assets/projectclips/dungeon-puzzle/DungeonPuzzlemain.webm",
+  "/assets/projectclips/obstacle-assault/ObstacleAssoultCon.webm"
 ];
 
 export default function LandingScene({ onEnter }) {
@@ -45,7 +46,7 @@ export default function LandingScene({ onEnter }) {
           <Github size={28} className="md:w-8 md:h-8" />
         </a>
         <a 
-          href="https://youtube.com/@keshavgosar?si=tzOAaueMIfgCApq_" 
+          href="https://youtube.com/@keshavgosar1087?si=YCRTx_vRou8dXDSa" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="text-gray-500 hover:text-amber-500 hover:scale-110 transition-all drop-shadow-md cursor-pointer"
